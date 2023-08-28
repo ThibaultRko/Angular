@@ -1,0 +1,9 @@
+<p class="{{classOrange}}">deuxieme-component works!</p>
+
+<!-- avec ngIf ma balise sera ou ne sera pas affiché dans son html -->
+<p *ngIf="isVisible">
+    Ce texte est caché.
+</p>
+<button type="button" (click)="toggleVisibility()">
+    {{buttonText}}
+</button>

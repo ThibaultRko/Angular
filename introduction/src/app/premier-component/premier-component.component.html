@@ -1,0 +1,18 @@
+<p class="{{classCerise}}">{{ title }}</p>
+<p class="{{classBanane}}">jauuuuuuuuuuuuuuuuuuune</p>
+<!-- la classe read viendra se rajouter a la liste de mes classes si la propriete renvoi une valeur trthy(true, chaine de caractere non vide,etc...) -->
+<p [class]="classCerise" [class.read]="isRead">mon deuxieme paragraphe
+    <button type="button" (click)="isReadToggle()">
+        toggleRead
+    </button>
+</p>
+
+<input type="text" [(ngModel)]="inputValue" (keyup.enter)="isReadToggle()">
+{{ inputValue }}
+
+<h2>NickName</h2>
+<p>
+    {{nickname}}
+</p>
+<input type="text" (keyup.enter)="setNickname(nicknameInput)" #nicknameInput/>
+
