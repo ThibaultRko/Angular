@@ -1,0 +1,12 @@
+<p class="{{classBlue}}">movie-list works!</p>
+
+
+<ul appCoffe>
+    <li *ngFor="let movie of movies; let i = index">
+        <h2>{{ movie.title }}</h2>
+        <p>{{ movie.description }}</p>
+        <p>Compteur : {{ counters[i] || 0 }}</p>
+        <button (click)="add(i)">+</button>
+        <button (click)="sub(i)">-</button>
+    </li>
+</ul>
