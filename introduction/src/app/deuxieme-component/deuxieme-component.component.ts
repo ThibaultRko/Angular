@@ -11,9 +11,9 @@ export class DeuxiemeComponentComponent {
   buttonText = 'Affiche le texte caché :)'
   movies = [{
     title: 'Forest Gump',
-    descritpion: 'running man...',
+    description: 'running man...',
   },{
-    titre: 'Top Gun',
+    title: 'Top Gun',
     description: 'Tom cruise on a plane'
   },{
     title: 'sharknado',
@@ -22,6 +22,7 @@ export class DeuxiemeComponentComponent {
     title: 'Bananado',
     description: 'banana + tornado'
   }]
+  mode: 'list' | 'card' | '' = '';
 
   toggleVisibility() {
     this.isVisible = !this.isVisible;

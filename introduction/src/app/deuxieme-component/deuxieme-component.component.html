@@ -7,3 +7,30 @@
 <button type="button" (click)="toggleVisibility()">
     {{buttonText}}
 </button>
+
+<div *ngFor="let movie of movies; even as IsEven; index as index">
+    <h3 [class.orange]="IsEven">
+        {{index}} . {{movie.title}}
+    </h3>
+    <p>
+        {{movie.description}}
+    </p>
+</div>
+
+<button type="button" (click)="mode = 'list'">
+    activer la vue liste
+</button>
+<button type="button" (click)="mode = 'card'">
+    activer la vue carte
+</button>
+<div [ngSwitch]="mode">
+    <p *ngSwitchCase="'list'">
+        List View
+    </p>
+    <p *ngSwitchCase="'card'">
+        Card View
+    </p>
+    <p *ngSwitchDefault="">
+        Default View
+    </p>
+</div>
