@@ -35,3 +35,4 @@ export class DeuxiemeComponentComponent {
     return this.buttonText = 'Affiche le texte caché'
   }
 }
+
