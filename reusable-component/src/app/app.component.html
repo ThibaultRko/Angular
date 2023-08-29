@@ -1,0 +1,46 @@
+<app-favorite [isFavorite]="true"></app-favorite>
+<app-favorite [isFavorite]="false"></app-favorite>
+<app-favorite [isFavorite]="true" (updateFavorite)="updateFavorite($event)"></app-favorite>
+<app-post-card>
+    <p>
+        contenu de mon ngContent
+    </p>
+</app-post-card>
+<app-post-card>
+    <app-favorite></app-favorite>
+    <div class=""footer>
+        Footer
+    </div>
+</app-post-card>
+
+{{openZippyCount}} zippy ouvert
+<app-zippy [isOpen]="false" (stateToggled)="updateZippyCount($event)">
+    <div>
+        <p>
+            texte bidon
+        </p>
+        <footer>
+            joli footer
+        </footer>
+    </div>
+</app-zippy>
+<app-zippy [isOpen]="false" (stateToggled)="updateZippyCount($event)">
+    <div>
+        <p>
+            texte bidon
+        </p>
+        <footer>
+            joli footer
+        </footer>
+    </div>
+</app-zippy>
+<app-zippy [isOpen]="false" (stateToggled)="updateZippyCount($event)">
+    <div>
+        <p>
+            texte bidon
+        </p>
+        <footer>
+            joli footer
+        </footer>
+    </div>
+</app-zippy>

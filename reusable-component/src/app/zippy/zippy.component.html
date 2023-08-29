@@ -1,0 +1,9 @@
+<div>
+    <div class="titleDiv" (click)="toggleIsOpen()">
+        Title
+    </div>
+    <div *ngIf="isOpen">
+        <!-- comme ça je peu lui passer autre chose que du texte -->
+        <ng-Content></ng-Content>
+    </div>
+</div>
