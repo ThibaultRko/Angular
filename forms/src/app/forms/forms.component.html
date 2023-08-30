@@ -1,0 +1,30 @@
+<form #form="ngForm" (ngSubmit)="submit(form)">
+    <div>
+        <label for="firstName">prénom</label>
+        <input required minlength="3" #firstName="ngModel" ngModel type="text" name="firstName" id="firstName">
+    </div>
+    <div *ngIf="firstName.touched && firstName.errors">
+        <p *ngIf="firstName.errors['required']">
+            le champ prénom est requis.
+        </p>
+        <p *ngIf="firstName.errors['minlength']">
+            il manque {{ firstName.errors['minlength'] ['requiredLength'] - firstName.errors['minlength'] ['actualLength'] }} charactères
+        </p>
+    </div>
+    <div>
+        <label for="comment">note</label>
+        <textarea ng ngModel name="comment" id="comment">
+        </textarea>
+    </div>
+    <div>
+        <label for="contactMethod">Méthodes de contact</label>
+        <select ngModel name="contactMethode" id="contactMethode">
+            <option *ngFor="let method of contactMethods" [value]="method">
+                {{method}}
+            </option>
+        </select>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+{{ form.value | json}}
+
