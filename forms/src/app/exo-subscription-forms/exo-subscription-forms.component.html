@@ -1,0 +1,24 @@
+<form [formGroup]="form">
+    <div>
+        <label for="pseudo">pseudo</label>
+        <input type="text" formControlName="pseudo" id="pseudo">
+        <div *ngIf="Pseudo.errors">
+            {{ Pseudo.errors | json}}
+        </div>
+    </div>
+    <div>
+        <label for="email">email</label>
+        <input type="text" formControlName="email" id="email">
+        <div *ngIf="UserEmail.errors">
+            {{ UserEmail.errors | json}}
+        </div>
+    </div>
+    <div>
+        <label for="password">password</label>
+        <input type="text" formControlName="password" id="password">
+        <div>
+            {{form.get('password')?.errors | json}}
+        </div>
+    </div>
+</form>
+{{ form.value|json}}
